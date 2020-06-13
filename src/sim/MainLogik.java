@@ -5,17 +5,17 @@ package sim;
 public class MainLogik {
 
     private int MAX_PLOTS = 20;
-    protected Plot[] plots = new Plot[MAX_PLOTS]; //leeres Array mit X Elementen
+    Plot[] plots = new Plot[MAX_PLOTS]; //leeres Array mit X Elementen
 
     //BESCHREIBEN des arrays
     public void writePlotArray(int w) {
         for (int i = 0; i < w; i++) {   //Ich erstelle w Beetobjekte und versehe sie mit random Wasserstand
             int rando = (int) (Math.random() * 100 + 1);
-            plots[i] = new Plot(i + 1, -1, rando); //"Plot" ist
+            plots[i] = new Plot(i + 1, -1, rando); //plots ist aus dieser Klasse, Plot eine Klasse aus package
         }
     }
 
-
+//Beschreiben der Buttons in einem Controller mit Wasserstand-Strings aus einem Plotarray
     public void initBtns(simController sim, Plot[] plo) {
         sim.b1.setText(String.valueOf(plo[0].wasserstand));
         sim.b2.setText(String.valueOf(plo[1].wasserstand));

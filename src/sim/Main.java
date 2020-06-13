@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javax.sound.midi.SysexMessage;
 
 public class Main extends Application {
 
@@ -21,7 +20,8 @@ public class Main extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
 
-        Parent root = fxmlLoader.load(getClass().getResource("layout.fxml").openStream());
+        Parent root = fxmlLoader.load(getClass().getResource("layout.fxml").openStream()); /*"load" lädt das Layout aus FXML sowie
+        den verknüpften Controller und dessen Felder*/
 
         myMain.initBtns(fxmlLoader.getController(), myMain.plots);
 

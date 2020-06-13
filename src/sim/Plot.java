@@ -1,6 +1,6 @@
 package sim;
 
-class Plot {
+public class Plot {
 
     protected int points; //für Form des Beets?
     protected int beetnummer; //Bezeichner
